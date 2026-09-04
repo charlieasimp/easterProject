@@ -14,7 +14,7 @@ public class Easter{
         int e = b%4;
         int f = (b+8)/25;
         int g = (b-f + 1)/3;
-        int h = (19 * a + b - d - g + 15)/30;
+        int h = (19 * a + b - d - g + 15)%30;
         int i = c/4;
         int k = c%4;
         int r = (32 + 2 * e + 2 * i - h - k)%7;
@@ -23,6 +23,6 @@ public class Easter{
         int p = (h + r - 7 * m + 114)% 31;
 
         System.out.println("a = "+a);
-        System.out.println("Easter in " + y + " will fall on " + n +"/" + p + 1); 
+        System.out.println("Easter in " + y + " will fall on " + n +"/" + (p + 1)); 
     }
 }
